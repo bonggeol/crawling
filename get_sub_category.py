@@ -17,14 +17,9 @@ def get_sub_category(big_category_url):
     chrome_options.add_argument("accept-encoding=" + "gzip, deflate, br")
     chrome_options.add_argument("sec-ch-ua-platform=" + "macOS")
 
-    # Set path to chrome/chromedriver as per your configuration
-    chrome_options.binary_location = "/home/bonggeol/chrome-linux64/chrome"
-    webdriver_service = Service(
-        "/home/bonggeol/chromedriver-linux64/chromedriver")
 
     # Choose Chrome Browser
-    driver = webdriver.Chrome(
-        service=webdriver_service, options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
 
     # category_url = 'https://emart.ssg.com/disp/category.ssg?dispCtgId=6000213114'
     driver.get(big_category_url)
